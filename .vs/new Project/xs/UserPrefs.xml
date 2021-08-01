@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{87D45252-64AE-46DE-254C-B4AB21344187}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/enemyS.cs">
+    <Files>
+      <File FileName="Assets/Script/enemyS.cs" Line="102" Column="70" />
+      <File FileName="Assets/Script/playerC.cs" Line="150" Column="46" />
+      <File FileName="Assets/Script/timer.cs" Line="29" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="new Project" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ae3b2829-3fb8-4a71-82dd-b6107cba0ff7" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
