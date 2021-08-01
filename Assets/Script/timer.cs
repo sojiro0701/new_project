@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class timer : MonoBehaviour
 {
     public float CountDownTime;
     public Text TextCountDown;
     public static bool isTimeup;
+    float steptime;
     
     // Start is called before the first frame update
     void Start()
     {
         //CountDownTime = CountDownTime;
         isTimeup = false;
+        steptime = 0.0f;
        
     }
 
     // Update is called once per frame
     void Update()
     {
+        steptime += Time.deltaTime;
         if (isTimeup == false)
         {
             TextCountDown.text = String.Format("Time: {0:00.00}", CountDownTime);
@@ -30,6 +34,10 @@ public class timer : MonoBehaviour
         {
             CountDownTime = 0.00f;
             isTimeup = true;
+        }
+        if (steptime >= 110.0f)
+        {
+            SceneManager.LoadScene("end");
         }
     }
 }

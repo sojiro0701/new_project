@@ -43,12 +43,12 @@ public class playerC : MonoBehaviour
                 GetComponent<Renderer>().material.color = Color.red;
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed);
+                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed - 0.5f);
                     gameObject.transform.position += velocity * Time.deltaTime;
                 }
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, -speed);
+                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, -speed - 0.5f);
                     gameObject.transform.position += velocity * Time.deltaTime;
                 }
                 if (Input.GetKey(KeyCode.RightArrow))
@@ -61,7 +61,7 @@ public class playerC : MonoBehaviour
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
-                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed + 2.0f);
+                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed);
                     gameObject.transform.position += velocity * Time.deltaTime;
                 }
                 if (Input.GetKeyDown(KeyCode.Space))
@@ -97,12 +97,12 @@ public class playerC : MonoBehaviour
                 GetComponent<Renderer>().material.color = Color.blue;
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed);
+                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed - 0.5f);
                     gameObject.transform.position += velocity * Time.deltaTime;
                 }
                 if (Input.GetKey(KeyCode.DownArrow))
                 {
-                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, -speed);
+                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, -speed - 0.5f);
                     gameObject.transform.position += velocity * Time.deltaTime;
                 }
                 if (Input.GetKey(KeyCode.RightArrow))
@@ -115,7 +115,7 @@ public class playerC : MonoBehaviour
                 }
                 if (Input.GetKey(KeyCode.S))
                 {
-                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed + 2.0f);
+                    Vector3 velocity = gameObject.transform.rotation * new Vector3(0, 0, speed);
                     gameObject.transform.position += velocity * Time.deltaTime;
                 }
                 if (Input.GetKeyDown(KeyCode.Space))

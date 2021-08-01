@@ -40,7 +40,7 @@ public class enemyS : MonoBehaviour
                 }
                 else
                 {
-
+                    Debug.Log("OK");
                     agent.SetDestination(points[taregetIndex].transform.position);
                     if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 0.5f)
                     {
@@ -54,6 +54,7 @@ public class enemyS : MonoBehaviour
                     }
                     if (agent.isOnOffMeshLink)
                     {
+                        Debug.Log("OP");
                         //agent.CompleteOffMeshLink();
                         GetComponent<Renderer>().enabled = false;
                     }

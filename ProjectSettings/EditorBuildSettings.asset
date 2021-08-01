@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/start.unity
+    guid: a4a2ec790aeb14dd19290f4cc2687c51
+  - enabled: 1
     path: Assets/Scenes/soto.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Ritsushimansion.unity
-    guid: 6af30374e4d6949fea129d13d8a11e71
-  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: f48c086f9a9b44d23adae0f3feb14919
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/out.unity
     guid: 6d13ccb5813034d76a60eec1811724df
   m_configObjects: {}
