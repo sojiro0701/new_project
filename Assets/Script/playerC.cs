@@ -11,17 +11,7 @@ public class playerC : MonoBehaviour
     public GameObject Camera3;
     public GameObject player;
     public GameObject[] warps = new GameObject [10];
-    public GameObject warp1;
-    public GameObject warp2;
-    public GameObject warp3;
-    public GameObject warp4;
-    public GameObject warp5;
-    public GameObject warp6;
-    public GameObject warp7;
-    public GameObject warp8;
-    public GameObject warp9;
-    public GameObject warp10;
-    public GameObject warp11;
+    public GameObject[] warp = new GameObject[10];
     public GameObject text;
     public float rotateSpeed = 3.0f;
     public static bool change;
@@ -163,49 +153,61 @@ public class playerC : MonoBehaviour
         {
             change = false;
         }
-        if (collision.gameObject == warp1)
+        if (collision.gameObject == warp[0])
         {
             transform.position = warps[1].transform.position;
         }
-        if (collision.gameObject == warp2)
+        if (collision.gameObject == warp[1])
         {
             transform.position = warps[0].transform.position;
         }
-        if (collision.gameObject == warp3)
+        if (collision.gameObject == warp[2])
         {
             transform.position = warps[1].transform.position;
         }
-        if (collision.gameObject == warp4)
+        if (collision.gameObject == warp[3])
         {
             transform.position = warps[2].transform.position;
         }
-        if (collision.gameObject == warp5)
+        if (collision.gameObject == warp[4])
         {
             transform.position = warps[9].transform.position;
         }
-        if (collision.gameObject == warp6)
+        if (collision.gameObject == warp[5])
         {
-
+            transform.position = warps[12].transform.position;
         }
-        if (collision.gameObject == warp7)
+        if (collision.gameObject == warp[6])
         {
-
+            transform.position = warps[13].transform.position;
         }
-        if (collision.gameObject == warp8)
+        if (collision.gameObject == warp[7])
         {
             transform.position = warps[8].transform.position;
         }
-        if (collision.gameObject == warp9)
+        if (collision.gameObject == warp[8])
         {
             transform.position = warps[7].transform.position;
         }
-        if (collision.gameObject == warp10)
+        if (collision.gameObject == warp[9])
         {
             transform.position = warps[4].transform.position;
         }
-        if (collision.gameObject == warp11)
+        if (collision.gameObject == warp[10])
         {
-
+            transform.position = warps[11].transform.position;
+        }
+        if (collision.gameObject == warp[11])
+        {
+            transform.position = warps[10].transform.position;
+        }
+        if (collision.gameObject == warp[12])
+        {
+            transform.position = warps[5].transform.position;
+        }
+        if (collision.gameObject == warp[13])
+        {
+            transform.position = warps[6].transform.position;
         }
     }
 }
