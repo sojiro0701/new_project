@@ -209,5 +209,21 @@ public class playerC : MonoBehaviour
         {
             transform.position = warps[6].transform.position;
         }
+        if (collision.gameObject == warp[15])
+        {
+            transform.position = warps[14].transform.position;
+        }
+        if (collision.gameObject == warp[14])
+        {
+            transform.position = warps[15].transform.position;
+        }
+        if (collision.gameObject == warp[16])
+        {
+            transform.position = warps[17].transform.position;
+        }
+        if (collision.gameObject == warp[17])
+        {
+            transform.position = warps[16].transform.position;
+        }
     }
 }
