@@ -163,9 +163,9 @@ public class playerC : MonoBehaviour
         }
         if (collision.gameObject == warp[2])
         {
-            transform.position = warps[1].transform.position;
+            transform.position = warps[21].transform.position;
         }
-        if (collision.gameObject == warp[3])
+        if (collision.gameObject == warp[21])
         {
             transform.position = warps[2].transform.position;
         }
@@ -233,21 +233,37 @@ public class playerC : MonoBehaviour
         {
             transform.position = warps[18].transform.position;
         }
-        if (collision.gameObject == warp[9])
+        if (collision.gameObject == warp[25])
         {
             transform.position = warps[20].transform.position;
         }
         if (collision.gameObject == warp[20])
         {
-            transform.position = warps[9].transform.position;
+            transform.position = warps[25].transform.position;
         }
-        if (collision.gameObject == warp[8])
+        if (collision.gameObject == warp[22])
         {
             transform.position = warps[19].transform.position;
         }
         if (collision.gameObject == warp[19])
         {
-            transform.position = warps[8].transform.position;
+            transform.position = warps[22].transform.position;
+        }
+        if (collision.gameObject == warp[23])
+        {
+            transform.position = warps[24].transform.position;
+        }
+        if (collision.gameObject == warp[24])
+        {
+            transform.position = warps[23].transform.position;
+        }
+        if (collision.gameObject == warp[26])
+        {
+            transform.position = warps[27].transform.position;
+        }
+        if (collision.gameObject == warp[27])
+        {
+            transform.position = warps[26].transform.position;
         }
     }
 }
