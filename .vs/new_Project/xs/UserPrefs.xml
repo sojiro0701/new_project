@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{4DCB3130-ADA5-28AF-6819-891A7A57CA24}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/timer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/enemyS.cs">
     <Files>
-      <File FileName="Assets/Script/enemyS.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/enemyS.cs" Line="88" Column="35" />
       <File FileName="Assets/Script/playerC.cs" Line="272" Column="42" />
       <File FileName="Assets/Script/startbotton.cs" />
       <File FileName="Assets/Script/endbotton.cs" />
@@ -13,7 +13,7 @@
           <Node name="new_Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="timer.cs" selected="True" />
+                <Node name="enemyS.cs" selected="True" />
               </Node>
             </Node>
           </Node>

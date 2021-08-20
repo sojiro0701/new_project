@@ -22,6 +22,7 @@ public class enemyS : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        
         taregetIndex = Random.Range(0, 12);
         Debug.Log(taregetIndex);
     }
@@ -42,7 +43,7 @@ public class enemyS : MonoBehaviour
                 {
                     Debug.Log("OK");
                     agent.SetDestination(points[taregetIndex].transform.position);
-                    if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 0.5f)
+                    if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 2.0f)
                     {
                         //points = GameObject.FindGameObjectsWithTag("point");
 
@@ -57,17 +58,21 @@ public class enemyS : MonoBehaviour
                         Debug.Log("OP");
                         //agent.CompleteOffMeshLink();
                         GetComponent<Renderer>().enabled = false;
+                        agent.speed = 5.0f;
+                        Debug.Log("at" + agent.speed);
                     }
                     else
                     {
                         GetComponent<Renderer>().enabled = true;
+                        agent.speed = 2.0f;
+                        Debug.Log("agent:"+agent.speed);
                     }
                 }
             }
             else
             {
                 agent.SetDestination(points[taregetIndex].transform.position);
-                if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 0.5f)
+                if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 2.0f)
                 {
                     //points = GameObject.FindGameObjectsWithTag("point");
 
@@ -80,11 +85,14 @@ public class enemyS : MonoBehaviour
                 if (agent.isOnOffMeshLink)
                 {
                     GetComponent<Renderer>().enabled = false;
-
+                    agent.speed = 5.0f;
+                    
                 }
                 else
                 {
                     GetComponent<Renderer>().enabled = true;
+                    agent.speed = 2.0f;
+                    
                 }
             }
         }
@@ -103,19 +111,5 @@ public class enemyS : MonoBehaviour
             run = false;
         }
     }
-    public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject == warp1)
-        {
-            Debug.Log(warps[1].transform.position);
-            transform.position = warps[1].transform.position;
-            GetComponent<Renderer>().enabled = true;
-        }
-        if (collision.gameObject == warp2)
-        {
-            Debug.Log(warps[0].transform.position);
-            transform.position = warps[0].transform.position;
-            GetComponent<Renderer>().enabled = true;
-        }
-    }
+    
 }
