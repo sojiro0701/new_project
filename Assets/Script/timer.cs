@@ -17,8 +17,7 @@ public class timer : MonoBehaviour
     {
         //CountDownTime = CountDownTime;
         isTimeup = false;
-        steptime = 0.0f;
-       
+        steptime = 0.00f;
     }
 
     // Update is called once per frame
@@ -35,7 +34,7 @@ public class timer : MonoBehaviour
             CountDownTime = 0.00f;
             isTimeup = true;
         }
-        if (steptime >= 200.0f)
+        if (isTimeup == true)
         {
             SceneManager.LoadScene("end");
         }
