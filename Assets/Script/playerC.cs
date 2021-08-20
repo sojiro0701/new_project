@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class playerC : MonoBehaviour
 {
     float speed = 2.0f;
-    public GameObject Camera1;
     public GameObject Camera2;
     public GameObject Camera3;
     public GameObject player;
@@ -20,9 +19,8 @@ public class playerC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera1.SetActive(true);
         Camera2.SetActive(false);
-        Camera3.SetActive(false);
+        Camera3.SetActive(true);
         change = true;
 
     }
@@ -66,23 +64,15 @@ public class playerC : MonoBehaviour
                         jump.jumpup = false;
                     }
                 }
-                if (Input.GetKey(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    Camera1.SetActive(false);
                     Camera2.SetActive(true);
                     Camera3.SetActive(false);
                 }
-                if (Input.GetKey(KeyCode.X))
+                if (Input.GetKeyUp(KeyCode.Z))
                 {
-                    Camera1.SetActive(false);
                     Camera2.SetActive(false);
                     Camera3.SetActive(true);
-                }
-                if (Input.GetKey(KeyCode.C))
-                {
-                    Camera1.SetActive(true);
-                    Camera2.SetActive(false);
-                    Camera3.SetActive(false);
                 }
             }
 
@@ -120,23 +110,15 @@ public class playerC : MonoBehaviour
                         jump.jumpup = false;
                     }
                 }
-                if (Input.GetKey(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Z))
                 {
-                    Camera1.SetActive(false);
                     Camera2.SetActive(true);
                     Camera3.SetActive(false);
                 }
-                if (Input.GetKey(KeyCode.X))
+                if (Input.GetKeyUp(KeyCode.Z))
                 {
-                    Camera1.SetActive(false);
                     Camera2.SetActive(false);
                     Camera3.SetActive(true);
-                }
-                if (Input.GetKey(KeyCode.C))
-                {
-                    Camera1.SetActive(true);
-                    Camera2.SetActive(false);
-                    Camera3.SetActive(false);
                 }
             }
         }
@@ -264,6 +246,30 @@ public class playerC : MonoBehaviour
         if (collision.gameObject == warp[27])
         {
             transform.position = warps[26].transform.position;
+        }
+        if (collision.gameObject == warp[28])
+        {
+            transform.position = warps[29].transform.position;
+        }
+        if (collision.gameObject == warp[29])
+        {
+            transform.position = warps[28].transform.position;
+        }
+        if (collision.gameObject == warp[30])
+        {
+            transform.position = warps[33].transform.position;
+        }
+        if (collision.gameObject == warp[33])
+        {
+            transform.position = warps[30].transform.position;
+        }
+        if (collision.gameObject == warp[31])
+        {
+            transform.position = warps[32].transform.position;
+        }
+        if (collision.gameObject == warp[32])
+        {
+            transform.position = warps[31].transform.position;
         }
     }
 }

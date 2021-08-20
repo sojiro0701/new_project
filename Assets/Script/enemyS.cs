@@ -80,6 +80,7 @@ public class enemyS : MonoBehaviour
                 if (agent.isOnOffMeshLink)
                 {
                     GetComponent<Renderer>().enabled = false;
+
                 }
                 else
                 {

@@ -35,7 +35,7 @@ public class timer : MonoBehaviour
             CountDownTime = 0.00f;
             isTimeup = true;
         }
-        if (steptime >= 110.0f)
+        if (steptime >= 200.0f)
         {
             SceneManager.LoadScene("end");
         }
