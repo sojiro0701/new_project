@@ -3,9 +3,9 @@
     <Files>
       <File FileName="Assets/Script/enemyS.cs" Line="88" Column="35" />
       <File FileName="Assets/Script/playerC.cs" Line="236" Column="42" />
-      <File FileName="Assets/Script/startbotton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/endbotton.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/timer.cs" Line="39" Column="43" />
+      <File FileName="Assets/Script/startbotton.cs" />
+      <File FileName="Assets/Script/endbotton.cs" />
+      <File FileName="Assets/Script/timer.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7e5f361d-c51c-4323-9fa9-8af8b978ef88" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a69909ce-506f-48b4-af1b-02b08748cf1c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
