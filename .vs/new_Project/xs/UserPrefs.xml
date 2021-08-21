@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{4DCB3130-ADA5-28AF-6819-891A7A57CA24}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/enemyS.cs">
     <Files>
+      <File FileName="Assets/Script/playerC.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/enemyS.cs" Line="306" Column="10" />
-      <File FileName="Assets/Script/playerC.cs" Line="329" Column="10" />
       <File FileName="Assets/Script/startbotton.cs" />
       <File FileName="Assets/Script/endbotton.cs" />
       <File FileName="Assets/Script/timer.cs" />
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3500a18a-4409-4eda-a515-eaaa3b0e5387" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="22541396-fd1b-4deb-865d-ca82c23d4e22" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
