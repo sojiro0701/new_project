@@ -295,5 +295,37 @@ public class playerC : MonoBehaviour
         {
             transform.position = warps[37].transform.position; 
         }
+        if (collision.gameObject == warp[44])
+        {
+            transform.position = warps[40].transform.position;
+        }
+        if (collision.gameObject == warp[40])
+        {
+            transform.position = warps[44].transform.position;
+        }
+        if (collision.gameObject == warp[41])
+        {
+            transform.position = warps[45].transform.position;
+        }
+        if (collision.gameObject == warp[45])
+        {
+            transform.position = warps[41].transform.position;
+        }
+        if (collision.gameObject == warp[42])
+        {
+            transform.position = warps[46].transform.position;
+        }
+        if (collision.gameObject == warp[46])
+        {
+            transform.position = warps[42].transform.position;
+        }
+        if (collision.gameObject == warp[43])
+        {
+            transform.position = warps[47].transform.position;
+        }
+        if (collision.gameObject == warp[47])
+        {
+            transform.position = warps[43].transform.position;
+        }
     }
 }
