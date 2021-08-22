@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{4DCB3130-ADA5-28AF-6819-891A7A57CA24}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/enemyS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/playerC.cs">
     <Files>
       <File FileName="Assets/Script/playerC.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/enemyS.cs" Line="306" Column="10" />
@@ -13,7 +13,7 @@
           <Node name="new_Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Script" expanded="True">
-                <Node name="enemyS.cs" selected="True" />
+                <Node name="playerC.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="22541396-fd1b-4deb-865d-ca82c23d4e22" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c695f6c7-b9ec-4076-8e10-5c7859d123e5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
