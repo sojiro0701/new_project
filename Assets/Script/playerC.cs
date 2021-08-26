@@ -14,6 +14,7 @@ public class playerC : MonoBehaviour
     public GameObject text;
     public float rotateSpeed = 3.0f;
     public static bool change;
+    public static bool jump;
 
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class playerC : MonoBehaviour
         Camera2.SetActive(false);
         Camera3.SetActive(true);
         change = true;
+        jump = true;
 
     }
 
@@ -58,10 +60,10 @@ public class playerC : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    if (jump.jumpup == true)
+                    if (jump == true)
                     {
                         GetComponent<Rigidbody>().velocity = new Vector3(0, 3, 0);
-                        jump.jumpup = false;
+                        jump = false;
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.Z))
@@ -104,10 +106,10 @@ public class playerC : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    if (jump.jumpup == true)
+                    if (jump == true)
                     {
                         GetComponent<Rigidbody>().velocity = new Vector3(0, 3, 0);
-                        jump.jumpup = false;
+                        jump = false;
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.Z))
@@ -129,7 +131,7 @@ public class playerC : MonoBehaviour
     {
         if (collision.gameObject.tag == "floer")
         {
-            jump.jumpup = true;
+            jump = true;
         }
         if (collision.gameObject.tag == "enemy")
         {
