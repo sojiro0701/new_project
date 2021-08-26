@@ -24,6 +24,7 @@ public class timer : MonoBehaviour
     void Update()
     {
         steptime += Time.deltaTime;
+        //残り１０秒からカウントダウンの時間を大きくする
         if (isTimeup == false)
         {
             TextCountDown.text = String.Format("Time: {0:00.00}", CountDownTime);

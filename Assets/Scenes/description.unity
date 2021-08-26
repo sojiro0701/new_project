@@ -1136,7 +1136,7 @@ MonoBehaviour:
     ... Up button to move forward\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000 
     ... Down button to move backward\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000 
     ... Left/Right button to rotate viewpoint\nSpace button \n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000 
-    Jump\n"
+    ... Jump\n"
 --- !u!222 &2063711816
 CanvasRenderer:
   m_ObjectHideFlags: 0
