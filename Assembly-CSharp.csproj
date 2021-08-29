@@ -59,9 +59,10 @@
     <Compile Include="Assets/Script/timer.cs" />
     <Compile Include="Assets/Script/playerC.cs" />
     <Compile Include="Assets/Script/enemyS.cs" />
-    <Compile Include="Assets/Script/botton.cs" />
     <Compile Include="Assets/Script/botton2.cs" />
     <Compile Include="Assets/Script/endtext.cs" />
+    <Compile Include="Assets/Script/botton.cs" />
+    <Compile Include="Assets/Script/playerA.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
