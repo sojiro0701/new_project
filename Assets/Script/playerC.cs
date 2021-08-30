@@ -136,6 +136,7 @@ public class playerC : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             change = false;
+            this.tag = "enemy";
         }
         if (collision.gameObject == warp[0])
         {
@@ -328,6 +329,14 @@ public class playerC : MonoBehaviour
         if (collision.gameObject == warp[47])
         {
             transform.position = warps[43].transform.position;
+        }
+        if (collision.gameObject == warp[48])
+        {
+            transform.position = warps[49].transform.position;
+        }
+        if (collision.gameObject == warp[49])
+        {
+            transform.position = warps[48].transform.position;
         }
     }
 }

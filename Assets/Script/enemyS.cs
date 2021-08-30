@@ -21,9 +21,10 @@ public class enemyS : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        
+        target = 
         taregetIndex = Random.Range(0, 12);
         Debug.Log(taregetIndex);
+        
     }
 
     // Update is called once per frame
@@ -37,10 +38,6 @@ public class enemyS : MonoBehaviour
                 {
                     speed = 3.0f;
                     agent.SetDestination(target.position);
-
-                }
-                else
-                {
                     void OnCollisionEnter(Collision collision)
                     {
                         if (collision.gameObject == warp[0])
@@ -235,7 +232,18 @@ public class enemyS : MonoBehaviour
                         {
                             transform.position = warps[43].transform.position;
                         }
+                        if (collision.gameObject == warp[48])
+                        {
+                            transform.position = warps[49].transform.position;
+                        }
+                        if (collision.gameObject == warp[49])
+                        {
+                            transform.position = warps[48].transform.position;
+                        }
                     }
+                }
+                else
+                {
                         Debug.Log("OK");
                     agent.SetDestination(points[taregetIndex].transform.position);
                     if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 2.0f)
