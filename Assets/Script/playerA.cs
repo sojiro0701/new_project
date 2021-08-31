@@ -16,14 +16,14 @@ public class playerA : MonoBehaviour
     public static bool change1;
     public static bool running;
     public GameObject target;
-
+    public static bool jump1;
 
     // Start is called before the first frame update
     void Start()
     {
         change1 = true;
         agent = GetComponent<NavMeshAgent>();
-
+        
         taregetIndex = Random.Range(0, 100);
         Debug.Log(taregetIndex);
         GetComponent<Renderer>().material.color = Color.red;
@@ -622,10 +622,12 @@ public class playerA : MonoBehaviour
                 }
             }
         }
+        else
+        {
+
+        }
     }
 
-
-    
     public void OnTriggerStay(Collider other)
     {
        if (change1 == true)
