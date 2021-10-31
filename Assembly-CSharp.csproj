@@ -63,6 +63,7 @@
     <Compile Include="Assets/Script/endtext.cs" />
     <Compile Include="Assets/Script/playerA.cs" />
     <Compile Include="Assets/Script/botton.cs" />
+    <Compile Include="Assets/Script/playerAC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

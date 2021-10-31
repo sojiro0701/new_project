@@ -10,10 +10,10 @@ public class playerA : MonoBehaviour
     public GameObject[] points = new GameObject[1];
     public GameObject[] warp = new GameObject[1];
     public GameObject[] warps = new GameObject[1];
+    public GameObject[] players;
     public int taregetIndex;
     public float speed;
     NavMeshAgent agent;
-    public static bool change1;
     public static bool running;
     public GameObject target;
     public static bool jump1;
@@ -21,9 +21,9 @@ public class playerA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        change1 = true;
         agent = GetComponent<NavMeshAgent>();
-        
+        players = GameObject.FindGameObjectsWithTag("player");
+        target = players[Random.Range(0, players.Length)];
         taregetIndex = Random.Range(0, 100);
         Debug.Log(taregetIndex);
         GetComponent<Renderer>().material.color = Color.red;
@@ -38,8 +38,9 @@ public class playerA : MonoBehaviour
             if (playerC.change == true)
             {
 
-                if (change1 == true)
+                if (playerAC.change == false)
                 {
+                    gameObject.tag = "player";
                     GetComponent<Renderer>().material.color = Color.red;
                     GetComponent<SphereCollider>().enabled = false;
                     if (running == true)
@@ -70,11 +71,11 @@ public class playerA : MonoBehaviour
                     }
                     else
                     {
-                        agent.SetDestination(point[taregetIndex].transform.position);
-                        if (Vector3.Distance(transform.position, point[taregetIndex].transform.position) < 2.0f)
+                        agent.SetDestination(points[taregetIndex].transform.position);
+                        if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 2.0f)
                         {
                             taregetIndex = Random.Range(0, 43);
-                            transform.LookAt(point[taregetIndex].transform.position);
+                            transform.LookAt(points[taregetIndex].transform.position);
                         }
                         if (agent.isOnOffMeshLink)
                         {
@@ -330,9 +331,11 @@ public class playerA : MonoBehaviour
                 }
             }
             else
-            {         
-                if (change1 == true)
+            {
+                if (playerAC.change == true)
                 {
+                    gameObject.tag = "enemy";
+
                     GetComponent<Renderer>().material.color = Color.red;
                     GetComponent<SphereCollider>().enabled = false;
                     if (running == true)
@@ -592,7 +595,8 @@ public class playerA : MonoBehaviour
                                 transform.position = warps[48].transform.position;
                             }
                         }
-                    }else
+                    }
+                    else
                     {
                         Debug.Log("OK");
                         agent.SetDestination(points[taregetIndex].transform.position);
@@ -627,39 +631,30 @@ public class playerA : MonoBehaviour
 
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            if (playerAC.change == false)
+            {
+                gameObject.tag = "player";
+            }
+            else
+            {
 
-    public void OnTriggerStay(Collider other)
-    {
-       if (change1 == true)
-        {
-            if (other.gameObject.tag == "enemy")
-            {
-                running = true;
             }
         }
-        else
+        if (collision.gameObject.tag == "enemy")
         {
-            if (other.gameObject.tag == "player")
+            if (playerAC.change == false)
             {
-                running = true;
+
             }
-        }
-    }
-    public void OnTriggerExit(Collider other)
-    {
-        if (change1 == true)
-        {
-            if (other.gameObject.tag == "enemy")
+            else
             {
-                running = false;
-            }
-        }
-        else
-        {
-            if (other.gameObject.tag == "player")
-            {
-                running = false;
+                gameObject.tag = "player";
             }
         }
     }
 }
+

@@ -6,9 +6,10 @@ using UnityEngine.AI;
 
 public class enemyS : MonoBehaviour
 {
-    public Transform target;
+    public GameObject target;
     public Transform point;
     public　GameObject[] points = new GameObject[13];
+    public GameObject[] players;
     public int taregetIndex;
     public float speed = 2;
     NavMeshAgent agent;
@@ -22,6 +23,8 @@ public class enemyS : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        players = GameObject.FindGameObjectsWithTag("player");
+        target = players[Random.Range(0, players.Length)];
         taregetIndex = Random.Range(0, 12);
         Debug.Log(taregetIndex);
         
@@ -38,7 +41,7 @@ public class enemyS : MonoBehaviour
                 {
 
                         speed = 3.0f;
-                        agent.SetDestination(target.position);
+                        agent.SetDestination(target.transform.position);
                         void OnCollisionEnter(Collision collision)
                         {
                             if (collision.gameObject == warp[0])
@@ -306,6 +309,7 @@ public class enemyS : MonoBehaviour
     {
         if (other.gameObject.tag == "player")
         {
+            target = other.gameObject;
             run = true;
         }
     }
