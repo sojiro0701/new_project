@@ -64,6 +64,7 @@
     <Compile Include="Assets/Script/playerA.cs" />
     <Compile Include="Assets/Script/botton.cs" />
     <Compile Include="Assets/Script/playerAC.cs" />
+    <Compile Include="Assets/Script/playerA1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

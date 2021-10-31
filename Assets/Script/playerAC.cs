@@ -5,14 +5,12 @@ using UnityEngine.AI;
 
 public class playerAC : MonoBehaviour
 {
-    public GameObject[] playerA;
     public static bool[] change = { false };
 
     // Start is called before the first frame update
     void Start()
     {
         //change = false;
-        gameObject.tag = "enemy";
     }
 
     // Update is called once per frame
@@ -20,6 +18,7 @@ public class playerAC : MonoBehaviour
     {
 
     }
+
 }
 /*
     public void move()

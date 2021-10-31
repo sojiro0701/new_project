@@ -22,9 +22,8 @@ public class playerC : MonoBehaviour
     {
         Camera2.SetActive(false);
         Camera3.SetActive(true);
-        change = true;
         jump = true;
-
+        this.gameObject.tag = "player";
     }
 
     // Update is called once per frame
@@ -32,7 +31,7 @@ public class playerC : MonoBehaviour
     {
         if (timer.isTimeup == false)
         {
-            if (change == true)
+            if (this.gameObject.tag == "player")
             {
                 GetComponent<Renderer>().material.color = Color.red;
                 if (Input.GetKey(KeyCode.UpArrow))
@@ -78,7 +77,7 @@ public class playerC : MonoBehaviour
                 }
             }
 
-            if (change == false)
+            if (this.gameObject.tag == "enemy")
             {
                 GetComponent<Renderer>().material.color = Color.blue;
                 if (Input.GetKey(KeyCode.UpArrow))

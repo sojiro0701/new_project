@@ -17,7 +17,8 @@ public class playerA : MonoBehaviour
     public static bool running;
     public GameObject target;
     public static bool jump1;
-    public static bool change;
+    public GameObject play;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,8 @@ public class playerA : MonoBehaviour
         Debug.Log(taregetIndex);
         GetComponent<Renderer>().material.color = Color.red;
         GetComponent<SphereCollider>().enabled = false;
-        change = false;
+        play = GameObject.Find ("player");
+        //this.gameObject.tag = "player";
     }
 
     // Update is called once per frame
@@ -37,12 +39,12 @@ public class playerA : MonoBehaviour
     {
         if (timer.isTimeup == false)
         {
-            if (playerC.change == true)
+            if (play.gameObject.tag == "player")
             {
 
-                if (change == false)
+                if (gameObject.tag == "player")
                 {
-                    gameObject.tag = "player";
+                   
                     GetComponent<Renderer>().material.color = Color.red;
                     GetComponent<SphereCollider>().enabled = false;
                     if (running == true)
@@ -332,11 +334,11 @@ public class playerA : MonoBehaviour
                     }
                 }
             }
-            else
+            if (play.gameObject.tag == "enemy")
             {
-                if (change == true)
+                if (gameObject.tag == "enemy")
                 {
-                    gameObject.tag = "enemy";
+                    
 
                     GetComponent<Renderer>().material.color = Color.blue;
                     GetComponent<SphereCollider>().enabled = false;
@@ -635,17 +637,12 @@ public class playerA : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "player" && this.gameObject.tag == "enemy")
         {
-            if (playerC.change == true)
-            {
-                gameObject.tag = "player";
-            }
-            else
-            {
-
-            }
+            this.gameObject.tag = "player";
+            collision.gameObject.tag = "enemy";
         }
+        /*
         if (collision.gameObject.tag == "enemy")
         {
             if (playerC.change == true)
@@ -657,6 +654,7 @@ public class playerA : MonoBehaviour
                 gameObject.tag = "player";
             }
         }
+        */
     }
 }
 
