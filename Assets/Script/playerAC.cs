@@ -6,43 +6,46 @@ using UnityEngine.AI;
 public class playerAC : MonoBehaviour
 {
     public GameObject[] playerA;
-    public static bool change;
+    public static bool[] change = { false };
 
     // Start is called before the first frame update
     void Start()
     {
-        change = false;
+        //change = false;
         gameObject.tag = "enemy";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void move()
-    {
-        if (.gameObject.tag == "player")
-        {
-            if (change == false)
-            {
-                gameObject.tag = "player";
-            }
-            else
-            {
 
-            }
-        }
-        if (.gameObject.tag == "enemy")
-        {
-            if (change == false)
-            {
-
-            }
-            else
-            {
-                gameObject.tag = "player";
-            }
-        }
     }
 }
+/*
+    public void move()
+    {
+        if (gameObject.tag == "player")
+        {
+            if (change == false)
+            {
+                gameObject.tag = "player";
+            }
+            else
+            {
+
+            }
+        }
+        if (gameObject.tag == "enemy")
+        {
+            if (change == false)
+            {
+
+            }
+            else
+            {
+                gameObject.tag = "player";
+            }
+        }
+    }
+*/
+

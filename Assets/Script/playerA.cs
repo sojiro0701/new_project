@@ -17,6 +17,7 @@ public class playerA : MonoBehaviour
     public static bool running;
     public GameObject target;
     public static bool jump1;
+    public static bool change;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class playerA : MonoBehaviour
         Debug.Log(taregetIndex);
         GetComponent<Renderer>().material.color = Color.red;
         GetComponent<SphereCollider>().enabled = false;
+        change = false;
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class playerA : MonoBehaviour
             if (playerC.change == true)
             {
 
-                if (playerAC.change == false)
+                if (change == false)
                 {
                     gameObject.tag = "player";
                     GetComponent<Renderer>().material.color = Color.red;
@@ -332,11 +334,11 @@ public class playerA : MonoBehaviour
             }
             else
             {
-                if (playerAC.change == true)
+                if (change == true)
                 {
                     gameObject.tag = "enemy";
 
-                    GetComponent<Renderer>().material.color = Color.red;
+                    GetComponent<Renderer>().material.color = Color.blue;
                     GetComponent<SphereCollider>().enabled = false;
                     if (running == true)
                     {
@@ -635,7 +637,7 @@ public class playerA : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            if (playerAC.change == false)
+            if (playerC.change == true)
             {
                 gameObject.tag = "player";
             }
@@ -646,7 +648,7 @@ public class playerA : MonoBehaviour
         }
         if (collision.gameObject.tag == "enemy")
         {
-            if (playerAC.change == false)
+            if (playerC.change == true)
             {
 
             }
