@@ -304,6 +304,10 @@ public class enemyS : MonoBehaviour
                 }
             }
         }
+        else
+        {
+
+        }
     }
     private void OnTriggerStay(Collider other)
     {
