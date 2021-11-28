@@ -27,9 +27,7 @@ public class playerA1 : MonoBehaviour
         players = GameObject.FindGameObjectsWithTag("player");
         running = false;
         taregetIndex = Random.Range(0, 100);
-        Debug.Log(taregetIndex);
         GetComponent<Renderer>().material.color = Color.red;
-        GetComponent<SphereCollider>().enabled = false;
         play = GameObject.Find("player");
         //this.gameObject.tag = "enemy";
     }
@@ -39,11 +37,10 @@ public class playerA1 : MonoBehaviour
     {
         if (timer.isTimeup == false)
         {
-            if (gameObject.tag == "player")
+            if (this.gameObject.tag == "player")
             {
 
                 GetComponent<Renderer>().material.color = Color.red;
-                GetComponent<SphereCollider>().enabled = false;
                 if (running == false)
                 {
                     Debug.Log("taregetIndex" + taregetIndex);
@@ -52,15 +49,15 @@ public class playerA1 : MonoBehaviour
                     {
                         //points = GameObject.FindGameObjectsWithTag("point");
 
-                        Debug.Log("A");
+                        //Debug.Log("A");
                         taregetIndex = Random.Range(0, 43);
                         transform.LookAt(points[taregetIndex].transform.position);
 
-                        Debug.Log(taregetIndex);
+                        //Debug.Log(taregetIndex);
                     }
                     if (agent.isOnOffMeshLink)
                     {
-                        Debug.Log("OP");
+                        //Debug.Log("OP");
                         //agent.CompleteOffMeshLink();
                         GetComponent<Renderer>().enabled = false;
                         agent.speed = 5.0f;
@@ -81,10 +78,9 @@ public class playerA1 : MonoBehaviour
             }
 
 
-            if (gameObject.tag == "enemy")
+            if (this.gameObject.tag == "enemy")
             {
                 GetComponent<Renderer>().material.color = Color.blue;
-                GetComponent<SphereCollider>().enabled = true;
                 if (running == true)
                 {
                     speed = 3.0f;
@@ -92,13 +88,13 @@ public class playerA1 : MonoBehaviour
                 }
                 else //if (running ==false)の時
                 {
-                    Debug.Log("OK");
+                    //Debug.Log("OK");
                     agent.SetDestination(points[taregetIndex].transform.position);
                     if (Vector3.Distance(transform.position, points[taregetIndex].transform.position) < 2.0f)
                     {
                         //points = GameObject.FindGameObjectsWithTag("point");
 
-                        Debug.Log("A");
+                        //Debug.Log("A");
                         taregetIndex = Random.Range(0, 43);
                         transform.LookAt(points[taregetIndex].transform.position);
 
@@ -106,7 +102,7 @@ public class playerA1 : MonoBehaviour
                     }
                     if (agent.isOnOffMeshLink)
                     {
-                        Debug.Log("OP");
+                        //Debug.Log("OP");
                         //agent.CompleteOffMeshLink();
                         GetComponent<Renderer>().enabled = false;
                         agent.speed = 5.0f;
@@ -131,11 +127,14 @@ public class playerA1 : MonoBehaviour
         {
             this.gameObject.tag = "player";
             collision.gameObject.tag = "enemy";
+            //GetComponent<Renderer>().material.color.
+            Debug.Log("player:player");
         }
         if (collision.gameObject.tag == "enemy" && this.gameObject.tag == "player") //Box Colliderとの時
         {
             this.gameObject.tag = "enemy";
             collision.gameObject.tag = "player";
+            Debug.Log("player:enemy");
         }
             if (collision.gameObject == warp[0])
             {
@@ -338,7 +337,5 @@ public class playerA1 : MonoBehaviour
                 transform.position = warps[48].transform.position;
             }
         }
-    
-
 }
 

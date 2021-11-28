@@ -135,7 +135,7 @@ public class playerC : MonoBehaviour
         if (collision.gameObject.tag == "enemy")
         {
             change = false;
-            this.tag = "enemy";
+            
         }
         if (collision.gameObject == warp[0])
         {
